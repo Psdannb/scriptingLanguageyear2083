@@ -70,3 +70,34 @@ let name = "dan bahadur adhikari";
 let eg = `my name is ${name}`;
 console.log(eg);
 */
+
+// function
+function greet() {
+  alert("Hello, welcome to JavaScript!");
+}
+// greet();
+function student(name) {
+  let msg = `Hello ${name}`;
+  alert(msg);
+}
+// student("sanam");
+// student("Bipana");
+
+function add(a, b) {
+  let c = a + b;
+  // console.log(c);
+  return c;
+  console.log(
+    "This will not be executed because it's after the return statement.",
+  );
+}
+// add(20, 30);
+let output = add(5, 10);
+// console.log(output); // This will log the returned value of the add function.
+//  arrow function
+let multiply = (x, y) => {
+  return x * y;
+  // return add(x, y);
+};
+let product = multiply(4, 5);
+console.log(product); // This will log the product of 4 and 5, which is 20.
