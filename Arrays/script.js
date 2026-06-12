@@ -99,15 +99,15 @@ let studentsData = [
 ];
 // let student = studentsData.find((student) => student.name === "Shivam");
 // console.log(student);
-let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 // let evenNumber = numbers.find((number) => number % 2 === 0);
 // console.log(evenNumber);
 // let evenNumbers = numbers.filter((number) => number % 2 === 0);
 // console.log(evenNumbers);
 
-let sumofarray = numbers.reduce((sum, currentValue) => {
-  return sum + currentValue;
-});
+// let sumofarray = numbers.reduce((sum, currentValue) => {
+//   return sum + currentValue;
+// });
 // console.log(sumofarray);
 // array concatination
 // let array1 = [1, 2, 3];
@@ -116,3 +116,78 @@ let sumofarray = numbers.reduce((sum, currentValue) => {
 // console.log(concatenatedArray);
 // console.log(array1);
 // console.log(array2);
+
+//map method()
+// let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+// let doubledNumbers = numbers.map((number) => number * 2);
+// console.log(numbers);
+// console.log(doubledNumbers);
+
+// array reverse
+// numbers.reverse();
+// console.log(numbers);
+
+// conversion to string
+// console.log(numbers);
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+let numbersAsString = numbers.toString();
+// console.log(numbersAsString);
+// join method
+// let numbersJoined = numbers.join("a");
+// console.log(numbersJoined);
+//spilt method
+let string = "Hello my name is sanam Majhi";
+// let stringAsArray = string.split("a");
+// let stringAsArray = string.split(" ");
+// let stringAsArray = string.split("");
+// console.log(stringAsArray);
+
+// suppose you have a string of words and you want to reverse the order of the words in the string, how would you do that using array methods?
+let sentence = "Hello my name is sanam Majhi";
+let sentencearray = sentence.split("");
+// console.log(sentencearray);
+let reversedSentenceArray = sentencearray.reverse();
+// console.log(reversedSentenceArray);
+let reversedSentence = reversedSentenceArray.join("");
+// console.log(reversedSentence);
+
+// one line solution
+let reversedSentenceOneLine = sentence.split("").reverse().join("");
+// console.log(reversedSentenceOneLine);
+
+//sorting an array
+let random = [4, 2, 1, 5, 7, 9, 109, 10823790, 2849283, 2748847625642];
+// random.sort((a, b) => a - b);
+// random.sort((a, b) => b - a);
+// console.log(random);
+
+// let randomword = ["zebra", "apple", "mango", "banana", "grapes"];
+// randomword.sort();
+// randomword.reverse();
+// console.log(randomword);
+
+let multidimensionalArray = [
+  [1, 2, 3],
+  [4, 5, 6],
+];
+// console.log(multidimensionalArray);
+// console.log(multidimensionalArray[0][1]);
+// console.log(multidimensionalArray[1][2]);
+
+let flattenedArray = multidimensionalArray.flat();
+// console.log(flattenedArray);
+
+// task:Student Grade Manager
+const scores = [45, 72, 88, 31, 95, 60, 74, 55, 89, 42];
+let passedStudents = scores.filter((score) => score >= 60);
+// console.log(passedStudents);
+let bonuspoint = passedStudents.map((score) => score + 5);
+// console.log(bonuspoint);
+let isHundred = scores.includes(100);
+// console.log(isHundred);
+let firstFailedStudent = scores.find((score) => score < 60);
+// console.log(firstFailedStudent);
+let totalScore = scores.reduce((total, score) => total + score, 0);
+// console.log(totalScore);
+let sortedScores = scores.sort((a, b) => b - a);
+console.log(sortedScores);
