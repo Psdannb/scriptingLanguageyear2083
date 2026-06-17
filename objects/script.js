@@ -101,8 +101,3 @@ function showtime() {
 setInterval(() => {
   showtime();
 }, 1000);
-
-function countdown(time) {
-  let totalTime = time * 60 * 60;
-  let;
-}
