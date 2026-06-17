@@ -57,3 +57,52 @@ let randomIndex = Math.trunc(randomNumber);
 // } else {
 //   alert("You won");
 // }
+let num = 8;
+// console.log(Math.cbrt(8));
+
+let degree = 45;
+let pival = Math.PI;
+let radian = (pival / 180) * degree;
+// console.log(radian);
+// console.log(Math.sin(radian));
+// console.log(Math.cos(radian));
+// console.log(Math.tan(radian));
+// console.log(Math.asin(radian));
+// console.log(Math.atan(radian));
+
+// date object
+
+// console.log(Date.getDate());=> this is wrong approach
+// let dateobj = new Date();
+// console.log(dateobj.getDate());
+// console.log(dateobj.getDay());
+// console.log(dateobj.getFullYear());
+// console.log(dateobj.getHours());
+// console.log(dateobj.getMinutes());
+// console.log(dateobj.getSeconds());
+// console.log(dateobj.getMilliseconds());
+// console.log(dateobj.getMonth());
+// console.log(dateobj.getTime());
+// console.log(dateobj.getUTCDate());
+// console.log(dateobj.getUTCHours());
+
+function showtime() {
+  let newdateobj = new Date();
+  let hours = newdateobj.getHours();
+  let minutes = newdateobj.getMinutes();
+  let seconds = newdateobj.getSeconds();
+  let time = `${hours}:${minutes}:${seconds}`;
+
+  let timeView = document.getElementById("timeview");
+  timeView.innerText = time;
+  // alert("hhh");
+}
+// showtime();
+setInterval(() => {
+  showtime();
+}, 1000);
+
+function countdown(time) {
+  let totalTime = time * 60 * 60;
+  let;
+}
