@@ -3,7 +3,7 @@ Q)How to create a timer like we see normally in offer in most of the ecommerce w
 solution :
 */
 // first of all lets set the target date as follows:
-let targetDate = new Date("Jun 31, 2026 23:59:59").getTime();
+let targetDate = new Date("Jun 30, 2026 7:30:59").getTime();
 // console.log(targetDate);
 /*this target date is in milisecond
 now lets create a function which will find the remaining time*/
@@ -26,3 +26,4 @@ function timer() {
 setInterval(() => {
   timer();
 }, 1000);
+// console.log("this should run once");
