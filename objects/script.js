@@ -124,10 +124,11 @@ let strObj = new String("Hello, World! JavaScript ");
 // console.log("concat:", strObj.concat(" - Learning"));
 // console.log("indexOf:", strObj.indexOf("o"));
 // console.log("lastIndexOf:", strObj.lastIndexOf("o"));
-// console.log("localeCompare:", strObj.localeCompare("Hello, world!"));
+// console.log("localeCompare:", strObj.localeCompare("Hello, World!"));
+
 // console.log("match:", strObj.match(/JavaScript/));
 // console.log("replace:", strObj.replace("World", "Friends"));
-console.log("search:", strObj.search("JavaScript"));
+// console.log("search:", strObj.search("JavaScript"));
 // console.log("slice:", strObj.slice(0, 5));
 // console.log("split:", strObj.split(","));
 // console.log("substr:", strObj.substr(7, 5));
@@ -148,7 +149,7 @@ console.log("search:", strObj.search("JavaScript"));
 // console.log(fruit1.localeCompare("apple")); // Returns 0  (They are identical)
 
 // HTML string methods (older JavaScript methods)
-let htmlText = "JavaScript";
+let htmlText = "JavaScript world";
 
 // console.log("anchor:", htmlText.anchor("jsLink"));
 // console.log("big:", htmlText.big());
@@ -162,16 +163,16 @@ let htmlText = "JavaScript";
 // console.log("small:", htmlText.small());
 // console.log("strike:", htmlText.strike());
 // console.log("sub:", htmlText.sub());
-// console.log("sup:", htmlText.sup());
+console.log("sup:", htmlText.sup());
 
-// const outputDiv = document.getElementById("output");
-// function showResult(label, value) {
-//   const p = document.createElement("p");
-//   p.innerHTML = `<strong>${label}:</strong> ${value}`;
-//   outputDiv.appendChild(p);
-// }
+const outputDiv = document.getElementById("output");
+function showResult(label, value) {
+  const p = document.createElement("p");
+  p.innerHTML = `<strong>${label}:</strong> ${value}`;
+  outputDiv.appendChild(p);
+}
 
-// showResult("anchor", htmlText.anchor("jsLink"));
+showResult("anchor", htmlText.anchor("jsLink"));
 // showResult("big", htmlText.big());
 // showResult("blink", htmlText.blink());
 // showResult("bold", htmlText.bold());
