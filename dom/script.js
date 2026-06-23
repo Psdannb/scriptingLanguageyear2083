@@ -6,16 +6,35 @@ For the better understanding attend the college lecture - Dan Bahadur Adhikari *
 There are several methods to target and select the particular as well as group of dom elements such as
 1. getElementById: This is used to select an individual DOm element with the help of its id attribute.
 for example : lets select the heading  and look it in the console */
+let title = document.getElementById("mainHeading");
+// console.log(title);
 
 /* 2. getElementsByClassName(): This is used to select the multiple elements with the same class attributes. */
+let subtitle = document.getElementsByClassName("subHeading");
+// console.log(subtitle);
+let htmlcollectionLength = subtitle.length;
+// console.log(htmlcollectionLength);
+for (let i = 0; i < htmlcollectionLength; i++) {
+  //   console.log(subtitle[i]);
+}
 
 /* 3. getElementsByName(): This is used to select the multiple elements with the same name attributes. */
+let paragraphs = document.getElementsByName("paragraph");
+// console.log(paragraphs);
+paragraphs.forEach((elem) => {
+  //   console.log(elem);
+});
 
 /* 4. getElementsByTagName(): This is used to select the multiple elements having a same Tag. */
-
+let pTag = document.getElementsByTagName("p");
+// console.log(pTag);
 /* 5. querySelector(): This is a master selector used to select a single element */
+let mainHeading = document.querySelector("#mainHeading");
+// console.log(mainHeading);
 
-/* 5. querySelectorAll(): This is a master selector used to select multiple elements */
+/* 6. querySelectorAll(): This is a master selector used to select multiple elements */
+let subheadings = document.querySelectorAll(".subHeading");
+console.log(subheadings);
 
 /* Now that we know how to select elements, let's look at how we can read, change, 
 and manipulate them. This is where DOM properties come into play.
