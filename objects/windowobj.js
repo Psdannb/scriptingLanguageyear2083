@@ -28,6 +28,7 @@ function stopCounter() {
 
 /*
 setTimeout and clearTimeout example 
+
 let deleteTimer; // Variable to hold our timeout ID
 
 function deleteItem() {

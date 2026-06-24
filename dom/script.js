@@ -34,7 +34,7 @@ let mainHeading = document.querySelector("#mainHeading");
 
 /* 6. querySelectorAll(): This is a master selector used to select multiple elements */
 let subheadings = document.querySelectorAll(".subHeading");
-console.log(subheadings);
+// console.log(subheadings);
 
 /* Now that we know how to select elements, let's look at how we can read, change, 
 and manipulate them. This is where DOM properties come into play.
@@ -43,45 +43,67 @@ Think of selectors as finding the element, and properties as interacting with it
 
 /* 1. innerHTML: This property allows you to get or set the HTML markup contained within an element.
 Unlike plain text, if you pass HTML tags here, the browser will render them.
-Example: Let's change the content of a div and add a styled span inside it.
-const container = document.getElementById('main-container');
-container.innerHTML = "Hello World! <span style='color: blue;'>This is dynamic.</span>";
+Example:
  */
+// let divelem = document.getElementById("output");
+// console.log(divelem.innerHTML);
+// divelem.innerHTML = "<h1>I am the text from the js</h1>";
+// console.log(divelem.innerText);
 
 /* 2. textContent: This is used to get or set the text content of an element and all its descendants. 
 Important Note: It ignores HTML tags and treats everything as pure text. It also retrieves text 
 that is hidden via CSS (e.g., display: none), which makes it slightly different from innerText.
-Example: Let's update the text of our main heading.
-const heading = document.querySelector(".main-heading");
-heading.textContent = "Welcome to our DOM Lecture!";
- */
+Example:*/
+let divelem = document.getElementById("output");
+// console.log(divelem.textContent);
 
 /* 3. style: This property is used to get or set the inline styling of an element.
 Note: In JavaScript, CSS properties with hyphens are written in camelCase (e.g., background-color becomes backgroundColor).
-Example: Let's change the background color and padding of a card element. 
-const card = document.querySelector(".card");
-card.style.backgroundColor = "#f4f4f4";
-card.style.padding = "20px";
-card.style.borderRadius = "8px";
+Example: 
 */
+let btn = document.getElementById("btn");
+// console.log(btn);
+// btn.style.color = "red";
+let isPermission = false;
+if (isPermission) {
+  btn.style.color = "green";
+} else {
+  btn.style.color = "red";
+}
 
 /* 4. classList: This is a powerful property that returns a collection of the class attributes of an element.
 Instead of overwriting all classes, we can use its built-in methods like .add(), .remove(), and .toggle().
 Example: Let's dynamically add an 'active' class to a navigation link. 
-const navLink = document.querySelector(".nav-link");
-navLink.classList.add("active");
-// navLink.classList.remove('active'); // To remove it
-// navLink.classList.toggle('highlight'); // Adds if missing, removes if present
 */
+let navlink = document.getElementsByClassName("navlink");
+// console.log(navlink);
+let linklength = navlink.length;
+for (let i = 0; i < linklength; i++) {
+  // console.log(navlink[i]);
+  if (i == 0) {
+    // navlink[i].classList.add("active");
+    // navlink[i].classList.remove("random");
+    // navlink[i].classList.toggle("random");
+  }
+}
 
-/* 5. getAttribute() & setAttribute(): These are used to read and change any attribute of an HTML element (like src, href, alt, id, etc.).
+/* Extra=> className : Gets or sets class names.,value:Gets or sets the value of form elements.*/
+let listItem = document.getElementsByTagName("li");
+// console.log(listItem[0].className);
+// listItem[0].className = "Ram";
+// console.log(listItem[0].innerText);
+
+let userInput = document.getElementById("username");
+// console.log(userInput.innerText);
+// console.log(userInput.value);
+
+/* 5. getAttribute() & setAttribute(): These are used to read  change  and remove any attribute of an HTML element (like src, href, alt, id, etc.).
 Example: Let's change the image source dynamically. 
-const profileImage = document.querySelector("#profile-pic");
-// Reading an attribute
-console.log(profileImage.getAttribute("src"));
-// Changing an attribute
-profileImage.setAttribute("src", "images/new-profile.jpg");
 */
+let imgTag = document.getElementById("image");
+// console.log(imgTag.getAttribute("alt"));
+// imgTag.setAttribute("alt", "jsphoto");
+// imgTag.setAttribute("class", "RijanIsABadBoy");
 
 /* 6. parentElement & children: These properties are used for "DOM Traversing"—moving up and down the DOM tree.
 parentElement gets the immediate parent node, while children gets a live collection of HTML child elements.
@@ -91,4 +113,19 @@ console.log(listItem.parentElement); // Logs the <ul> or <ol>
 
 const mainList = document.querySelector("#menu-list");
 console.log(mainList.children); // Logs all the <li> elements inside it
+
 */
+
+/* 7. createElement():Creates a new element.
+let p = document.createElement("p");
+ */
+/* 8. appendChild() and append():Adds an element.
+parent.appendChild(p);
+ */
+/* 9. prepend():Adds content at the beginning..
+element.prepend("Hello");
+ */
+
+/* 9. removeChild():Removes a child element.
+parent.removeChild(child);
+ */
