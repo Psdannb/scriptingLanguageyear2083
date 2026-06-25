@@ -88,7 +88,7 @@ for (let i = 0; i < linklength; i++) {
 }
 
 /* Extra=> className : Gets or sets class names.,value:Gets or sets the value of form elements.*/
-let listItem = document.getElementsByTagName("li");
+// let listItem = document.getElementsByTagName("li");
 // console.log(listItem[0].className);
 // listItem[0].className = "Ram";
 // console.log(listItem[0].innerText);
@@ -108,24 +108,38 @@ let imgTag = document.getElementById("image");
 /* 6. parentElement & children: These properties are used for "DOM Traversing"—moving up and down the DOM tree.
 parentElement gets the immediate parent node, while children gets a live collection of HTML child elements.
 Example: Let's find a list item's parent or look at the children of a list. 
+*/
 const listItem = document.querySelector("li");
-console.log(listItem.parentElement); // Logs the <ul> or <ol>
+// console.log(listItem.parentElement); // Logs the <ul> or <ol>
 
 const mainList = document.querySelector("#menu-list");
-console.log(mainList.children); // Logs all the <li> elements inside it
-
-*/
+// console.log(mainList.children); // Logs all the <li> elements inside it
 
 /* 7. createElement():Creates a new element.
-let p = document.createElement("p");
  */
+let par = document.createElement("p");
+par.innerText = "I am created by js";
+// console.log(par);
+
+let div = document.createElement("div");
+
+div.classList.add("jsdiv");
+
 /* 8. appendChild() and append():Adds an element.
-parent.appendChild(p);
+parent.appendChild(child);
  */
+div.append(par);
+// console.log(div);
+
+let body = document.querySelector("body");
+// console.log(body);
+body.appendChild(div);
 /* 9. prepend():Adds content at the beginning..
 element.prepend("Hello");
  */
 
-/* 9. removeChild():Removes a child element.
+// body.prepend(div);
+/* 10 removeChild():Removes a child element.
 parent.removeChild(child);
  */
+mainList.removeChild(listItem);
