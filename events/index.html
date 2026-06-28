@@ -7,6 +7,53 @@
     <script src="script.js" defer></script>
   </head>
   <body>
+    <!-- Formal Defination  -->
+    <h1>What is Event Handling?</h1>
+    <p>
+      Event handling is the process of detecting and responding to events that
+      occur in a web page. An event is an action performed by the user or
+      browser, such as clicking a button, pressing a key, submitting a form, or
+      loading a page. JavaScript uses event handlers to execute specific code
+      when an event occurs.
+    </p>
+    <h2>Listening for Events:</h2>
+    <p>
+      Listening for an event means waiting for a particular action to occur on
+      an HTML element. JavaScript provides the addEventListener() method for
+      this purpose.
+    </p>
+    <code>Syntax: element.addEventListener("event", function);</code>
+    <p>
+      Some of the events are
+      :click,mousemove,mouseover,mouseout,dblclick,DOMContentLoaded,load,keydown,keyup,scroll,
+      submit etc
+    </p>
+
+    <h2>Reacting to Events:</h2>
+    <p>
+      Reacting to an event means performing an action when the event occurs.
+    </p>
+
+    <h2>What is preventDefault?</h2>
+    <p>
+      preventDefault() is a method of the Event object that is used to stop the
+      browser's default action associated with an event.
+    </p>
+
+    <h2>Removing an Event Listener</h2>
+    <p>
+      The removeEventListener() method is used to remove an event listener that
+      was previously attached to an element using addEventListener(). This
+      prevents the event handler from executing when the event occurs.
+    </p>
+    <code>syntax:element.removeEventListener("event", functionName);</code>
+    <p>
+      Here : "event" → Event type (e.g., "click", "submit") functionName → The
+      function that was attached as the event handler
+    </p>
+
+    <!-- from here html tags are used by js code  -->
+
     <!-- <button onclick="clicked()">click me</button> -->
     <button id="countbtn">count</button>
   </body>
