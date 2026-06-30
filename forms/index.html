@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Forms</title>
+    <style>
+        body{
+            padding: 10px;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>Introduction</h2>
+    <p>
+      A form is an HTML container used to collect input from users. Forms are
+      widely used in web applications for tasks such as user registration,
+      login, feedback collection, surveys, and online transactions.
+    </p>
+    <p>
+      JavaScript plays an important role in form handling by allowing developers
+      to:
+      <ul><li>Access form elements and their values.</li>
+      <li>Validate user input before submission.</li>
+      <li>Display error messages dynamically.</li>
+      <li>Submit form data asynchronously using AJAX.</li></ul>
+    </p>
+    <h2>Accessing Form Elements</h2>
+    <p>Before performing any operation on a form element, JavaScript must access it through the Document Object Model (DOM).</p>
+    <p>All other dom methods can be used to access the form along with <code>document.forms[]</code></p>
+    <p>JavaScript can access form elements, validate them, and process their data before sending it to the server.</p>
+
+
+    <h2>The content below is  for the js demonstration purpose :</h2>
+    <h3>Text Fields,textareas and hidden fields </h3>
+    <input type="text" id="username">
+
+    <h3>select boxes</h3>
+    <select id="faculty">
+    <option>BCA</option>
+    <option>BIM</option>
+    <option>BBS</option>
+   </select>
+
+   <h3>Checkbox</h3>
+   <input type="checkbox" id="agree">
+ <h3> Radio Buttons</h3>
+ <input type="radio"
+       name="gender"
+       value="Male">
+
+<input type="radio"
+       name="gender"
+       value="Female">
+
+<p>Now i want you to create a registration form and try to access the value entered by the user in javascript when user submits the form . </p>
+    <code>Hint : Might have a look on its default behaviour on form submission</code>
+
+
+</body>
+
+</html>
