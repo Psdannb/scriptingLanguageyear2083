@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Forms</title>
+    <script src="script.js" defer></script>
     <style>
         body{
             padding: 10px;
@@ -32,18 +33,21 @@
 
 
     <h2>The content below is  for the js demonstration purpose :</h2>
-    <h3>Text Fields,textareas and hidden fields </h3>
-    <input type="text" id="username">
+<form action="" id="registerform">
+      <h3>Text Fields,textareas and hidden fields </h3>
+    <input type="text" id="username" >
+    <input type="hidden" id="hiddenfield" value="hidden value">
+    <textarea id="textarea" rows="4" cols="50"></textarea>
 
     <h3>select boxes</h3>
     <select id="faculty">
-    <option>BCA</option>
+    <option >BCA</option>
     <option>BIM</option>
     <option>BBS</option>
    </select>
 
    <h3>Checkbox</h3>
-   <input type="checkbox" id="agree">
+   <input type="checkbox" id="agree"> <label for="agree">I agree to the terms and conditions</label>
  <h3> Radio Buttons</h3>
  <input type="radio"
        name="gender"
@@ -52,6 +56,10 @@
 <input type="radio"
        name="gender"
        value="Female">
+
+       
+       <input type="submit">
+</form>
 
 <p>Now i want you to create a registration form and try to access the value entered by the user in javascript when user submits the form . </p>
     <code>Hint : Might have a look on its default behaviour on form submission</code>
