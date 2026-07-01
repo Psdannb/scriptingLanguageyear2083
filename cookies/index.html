@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cookies</title>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <h1>Introduction to Cookies</h1>
+    <p>
+      A cookie is a small piece of data stored by a web browser on the user's
+      computer. Cookies are used to remember information about a user and
+      maintain state between different web pages and browser sessions.
+      <br />
+      Since HTTP is a stateless protocol, a web server cannot remember previous
+      requests from the same user. Cookies help solve this problem by storing
+      user-related information in the browser and sending it back to the server
+      with future requests.
+    </p>
+    <p>Common uses of cookies include:</p>
+    <ul>
+      <li>User authentication</li>
+      <li>Remembering login information</li>
+      <li>Storing user preferences</li>
+      <li>Tracking user activity</li>
+      <li>Maintaining shopping cart information</li>
+    </ul>
+
+    <h1>Cookie Structure</h1>
+    <p>
+      A cookie consists of several attributes:
+      <code>name=value; expires=date; domain=domain-name; path=path-name</code>
+      <br />
+      Example:
+      <code
+        >username=Ram; expires=Fri, 31 Dec 2027 12:00:00 GMT;
+        domain=example.com; path=/</code
+      >
+    </p>
+    <h1>document.cookie</h1>
+    <p>
+      JavaScript uses the <code>document.cookie</code> property to create, read,
+      update, and delete cookies
+    </p>
+
+    <h2>From here the html elem in used to demonstrate js logic</h2>
+    <button onclick="setCookie()">Set Cookie</button>
+    <button onclick="getCookie()">Get Cookie</button>
+  </body>
+</html>
