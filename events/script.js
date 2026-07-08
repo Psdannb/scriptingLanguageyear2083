@@ -8,6 +8,10 @@ let removecountbtn = document.getElementById("removeEvent");
 // countbtn.addEventListener("click", clicked);
 
 countbtn.addEventListener("click", countclick);
+setTimeout(() => {
+  countbtn.removeEventListener("click", countclick);
+}, 2000);
+
 removecountbtn.addEventListener("click", () => {
   countbtn.removeEventListener("click", countclick);
 });
