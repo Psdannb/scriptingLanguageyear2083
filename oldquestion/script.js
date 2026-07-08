@@ -62,6 +62,8 @@ bluebtn.addEventListener("click", () => {
   changeColor("blue");
 });
 */
+
+/*
 let bgbutton = document.getElementsByName("bgbutton");
 // console.log(bgbutton);
 bgbutton.forEach((element) => {
@@ -71,3 +73,36 @@ bgbutton.forEach((element) => {
     changeColor(elemValue);
   });
 });
+
+*/
+/*
+2019 Batch question number : 3
+QN: What is NAN in js? Write js code to change background color of  web page every second.
+
+let color = "blue";
+function changeBackgroundColor() {
+  let body = document.getElementById("body");
+  body.style.backgroundColor = color;
+  if (color == "blue") {
+    color = "red";
+  } else {
+    color = "blue";
+  }
+}
+setInterval(() => {
+  changeBackgroundColor();
+}, 1000);
+*/
+/*
+2019 Batch question number : 4
+QN: What is arrow function? write js code to calculate factorial of given number using arrow function.
+*/
+const calculateFactorial = (n) => {
+  if (n == 0) {
+    return 1;
+  } else {
+    return n * calculateFactorial(n - 1);
+  }
+};
+let result = calculateFactorial(5);
+console.log(result);
