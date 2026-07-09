@@ -93,10 +93,11 @@ setInterval(() => {
   changeBackgroundColor();
 }, 1000);
 */
+
 /*
 2019 Batch question number : 4
 QN: What is arrow function? write js code to calculate factorial of given number using arrow function.
-*/
+
 const calculateFactorial = (n) => {
   if (n == 0) {
     return 1;
@@ -106,3 +107,87 @@ const calculateFactorial = (n) => {
 };
 let result = calculateFactorial(5);
 console.log(result);
+*/
+
+/*
+2018 Batch QN:4
+what is an immediately Invoked function in javascript? Explain with suitable Example.
+ANS:
+An Immediately Invoked Function  is a JavaScript function that is defined and executed immediately after it is created. Unlike normal functions,it does not need to be called explicitly.
+syntax: 
+(function () {
+    // Statements
+})();
+
+or using an arrow function:
+
+(() => {
+    // Statements
+})();
+Note:The function runs once and cannot be called again unless it is defined again.
+example 1:
+(function () {
+  alert("welocome to our site");
+})();
+example 2:
+(() => {
+  console.log("I am immediately invoked arrow function");
+})();
+
+*/
+/*
+2018 Batch QN:9 (a)
+Write a program which includes a function sum(). This function sum() should be designed to add an aribitary list of parameters.(for example, if you call the function sum() as sum(1,2) it should return the result 3 and if again you call the function sum() as sum(1,3,4) it should return the result 8).
+
+
+function sum(...numbers) {
+  // console.log(numbers);
+  let sum = numbers.reduce((acc, elem) => acc + elem);
+  return sum;
+}
+// let result = sum(1, 2);
+// let output = `The sum function returns ${result}`;
+// console.log(output);
+
+let result = sum(1, 3, 4);
+let output = `The sum function returns ${result}`;
+console.log(output);
+*/
+/*
+2018 Batch QN:9 (b)
+Write a program that displays the continuous time in the webpage. The time should be in  the format of HH:MM:SS.
+
+let timedisplay = document.getElementById("timedisplay");
+function showtime() {
+  let dateObj = new Date();
+  let hours = dateObj.getHours();
+  // console.log(hours);
+  let min = dateObj.getMinutes();
+  // console.log(min);
+  let sec = dateObj.getSeconds();
+  // console.log(sec);
+  let output = `${hours}:${min}:${sec}`;
+  timedisplay.innerText = output;
+}
+showtime();
+setInterval(() => {
+  showtime();
+}, 1000);
+*/
+/*
+2017 Batch QN:2 
+Write javascript code to print smallest and large number among elements of an array.
+
+let numbers = [10, 1, 5, 50, 100, 200, 55, 29, 67, -200, 100000];
+let maxValue = Math.max(...numbers);
+let output1 = ` The largest number is :${maxValue}`;
+// console.log(maxvalue);
+let minValue = Math.min(...numbers);
+// console.log(minValue);
+let output2 = ` The Smallest number is :${minValue}`;
+let outputdiv = document.getElementById("numberdisplay");
+outputdiv.append(output1);
+let brtag = document.createElement("br");
+outputdiv.append(brtag);
+outputdiv.append(output2);
+*/
