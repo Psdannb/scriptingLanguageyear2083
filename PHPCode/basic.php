@@ -34,8 +34,16 @@ PHP is loosely typed i.e. PHP automatically determines the data type of a variab
 
 Example:
 $name = "Ram"; // String
-// $age = 20; // Integer
-// $height = 5.8; // Float
-// $isStudent = true; // Boolean
-*/
-?>
+$age = 20; // Integer
+$height = 5.8; // double
+$isStudent = true; // Boolean
+$numbers=[1,2,3,4,5];//array
+$random=NULL; //NULL
+datatypes in php are in the comments and we can check the datatype of any variable using gettype() function.
+
+
+operators in php:
+1) Arithmetic operator(+,-,*,/,%,++,--)
+2) String concatination (.)
+3) Assignment operator(=,+=,-=,*=,/=,%=)
+4) conditional Operators(>,>=,<,<=,==,===) */ $a="6" ; $b=6; echo $a==$b; ?>
