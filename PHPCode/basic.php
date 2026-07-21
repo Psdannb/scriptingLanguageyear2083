@@ -46,4 +46,5 @@ operators in php:
 1) Arithmetic operator(+,-,*,/,%,++,--)
 2) String concatination (.)
 3) Assignment operator(=,+=,-=,*=,/=,%=)
-4) conditional Operators(>,>=,<,<=,==,===) */ $a="6" ; $b=6; echo $a==$b; ?>
+4) conditional Operators(>,>=,<,<=,==,===) //$a="6" ; $b=6; echo $a==$b;*/ /* control structures(if else,switch, all
+    loops)=> all the syntax and example should be added here when sanam provides me*/ ?>
