@@ -6,15 +6,17 @@ syntax: $array_name = array(value1, value2, value3);
 OR
 $array_name = [value1, value2, value3];
 */
-$students=array("Ram",10,22.5,true);
+// $students=array("Ram",10,22.5,true);
 // var_dump($students);
+// print_r($students);
 $numbers=[10,11.5];
+// print_r($numbers);
 // var_dump($numbers);
 
 
 
 // accessing the array elements
-$elem=$students[2];
+// $elem=$students[2];
 // echo $elem;
 
 
@@ -22,6 +24,7 @@ $elem=$students[2];
 syntax:foreach($arrayname as $elementname){
 }
  */
+$students=array("Ram",10,22.5,true);
 foreach($students as $student){
     // echo $student;
     // echo "<br>";
@@ -29,7 +32,7 @@ foreach($students as $student){
 /* so far we have discussed about the indexed array in php . now lets jump into associaive array;
 $arrayname=["key"=>value,"key"=>value .......]
 */
-$associative=["name"=>"Samjhana","rollno"=>1,"address"=>"Biratnagar"];
+$associative=["name"=>"Alisha","rollno"=>1,"address"=>"Biratnagar"];
 // echo $associative['name'];
 
 foreach($associative as $data){
@@ -42,15 +45,15 @@ foreach($associative as $key=>$value){
     // echo "<br>";
     // echo $value;
     //     echo "<br>";
-    // if($key=="name"){
-    //     echo $value;
-    // }
+ 
 }
 
 
 
-/*Multidimensional Array: A multidimensional array is an array that contains one or more arrays as its elements. It is used to store data in a tabular form, such as rows and columns. 
-
+/*Multidimensional Array: A multidimensional array is an array that contains one or more arrays as its elements. It is used to store data in a tabular form, such as rows and columns. */
+$multidimension=[["name"=>"Sanam","rollno"=>01,"phonenumber"=>9814203050],["name"=>"Samjhana","rollno"=>02,"phonenumber"=>9814203060]];
+// print_r($multidimension);
+echo $multidimension[1]['name'];
 /*------------------------Array Methods---------------------------*/
 //  1. array(): It is used to create an array
  
