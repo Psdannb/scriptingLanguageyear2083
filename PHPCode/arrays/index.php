@@ -53,7 +53,7 @@ foreach($associative as $key=>$value){
 /*Multidimensional Array: A multidimensional array is an array that contains one or more arrays as its elements. It is used to store data in a tabular form, such as rows and columns. */
 $multidimension=[["name"=>"Sanam","rollno"=>01,"phonenumber"=>9814203050],["name"=>"Samjhana","rollno"=>02,"phonenumber"=>9814203060]];
 // print_r($multidimension);
-echo $multidimension[1]['name'];
+// echo $multidimension[1]['name'];
 /*------------------------Array Methods---------------------------*/
 //  1. array(): It is used to create an array
  
@@ -71,12 +71,12 @@ else{
 }
 */
 /*3.  array_push(): This is used to add element/elements at the end of the array
-syntax: array_push(arrayname,variable/array);
+syntax: array_push(arrayname,variable or elements/array);
 Example:
 
 $exampleArray=[1,2,3,4];
 array_push($exampleArray,"name","rollno");
-// print_r($exampleArray);
+print_r($exampleArray);
 array_push($exampleArray,["a","b","c"]);
 print_r($exampleArray);
 */
@@ -87,7 +87,7 @@ syntax: array_unshift(arrayname,variable/array);
 Example:
 
 $exampleArray=[1,2,3,4];
-// array_unshift($exampleArray,"name","rollno");
+array_unshift($exampleArray,"name","rollno");
 // print_r($exampleArray);
 array_unshift($exampleArray,["a","b","c"]);
 print_r($exampleArray);
@@ -96,11 +96,13 @@ print_r($exampleArray);
 /* 5. array_pop() :It used to remove and return the last element of an array.
 syntax: array_pop(array);
 Example:
+
 $colors = ["Red", "Green", "Blue"];
 
 $removed = array_pop($colors);
 
 echo $removed;
+echo "<br>";
 print_r($colors);
 */
 
@@ -128,7 +130,7 @@ $colors = [
 // print_r($colors);
 $result = array_flip($colors);
 print_r($result);
-// print_r($colors);
+print_r($colors);
 */
 
 
@@ -140,7 +142,8 @@ $student = [
     "name" => "Ram",
     "age" => 20,
     "city" => "Pokhara",
-    "xyz"=>200
+    "xyz"=>200,
+    "lover"=>"Arjun"
 ];
 
 $result = array_keys($student);
@@ -158,16 +161,16 @@ $arr2 = ["Blue", "Yellow"];
 
 $result = array_merge($arr1, $arr2,["a","b","c"],$arr1);
 
-print_r($result);
-eExample 2:
+// print_r($result);
+// eExample 2:
 $arr1 = ["name"=>"Ram","age"=>20];
 $arr2 = ["name"=>"Shyam","age"=>25];
 
-$result = array_merge($arr2, $arr1);
+$result = array_merge($arr1, $arr2);
 
-print_r($result);
+// print_r($result);
+
 */
-
 /*10. array_merge_recursive() :It is used to merge two or more arrays recursively.
  If two arrays have the same string key, their values are merged into an array instead of overwriting each other.
 syntax: array_merge_recursive(array1, array2, ...);
@@ -193,9 +196,10 @@ syntax: array_rand(array, number);
 Here, array → The array from which to select random keys.
 number (optional) → Number of random keys to return.
 Example:
+
 $colors = ["Red", "Green", "Blue", "Yellow"];
 
-$keys = array_rand($colors, 2);
+$keys = array_rand($colors,2);
 
 print_r($keys);
 */
@@ -206,7 +210,7 @@ syntax: array_reverse(array);
 
 Example:
 
-$colors = ["Red", "Green", "Blue"];
+$colors = ["Red", "Green", "Blue",2];
 
 $result = array_reverse($colors);
 
@@ -218,14 +222,14 @@ If the value is not found, it returns false.
 syntax: array_search(value, array);
 Example:
 
+
 $colors = ["Red", "Green", "Blue","Blue"];
 
-// $key = array_search("Blue", $colors);
+$key = array_search("Blue", $colors);
 // echo $key;
 $key = array_search("pink", $colors);
 
 var_dump($key); // Output: bool(false) since "pink" is not found in the array
-
 */
 
 /*14. array_unique() :It is used to remove duplicate values from an array and return a new array containing only unique values.
@@ -237,13 +241,13 @@ $colors = ["Red", "green", "Red", "Blue", "Green"];
 $result = array_unique($colors);
 
 print_r($result);
-
 */
+
 /*15. array_sum() :It is used to calculate and return the sum of all numeric values in an array.
 syntax:array_sum(array);
 Example:
 
-$numbers = [10, 20, "Hello", 40];
+$numbers = [10, 20, "50", 40];
 // echo array_sum($numbers);
 
 $marks=["web"=>80,"dbms"=>90,"economics"=>70];
@@ -255,21 +259,23 @@ echo array_sum($marks);
 syntax:array_product(array);
 
 Example:
+
 $numbers = [2, 3, 4];
 
 echo array_product($numbers);
-
+*/
 
 /*17. array_values() :It is used to return all the values of an array and reindex them with numeric keys starting from 0
 syntax:array_values(array);
 
 Example:
+
 $student = [
     "name" => "Ram",
     "age" => 20,
     "city" => "Pokhara"
 ];
-
+// print_r($student);
 $result = array_values($student);
 
 print_r($result);
@@ -282,6 +288,7 @@ syntax:array_walk(array, callback_function);
 Here,callback_function → A function that will be called for each array element.
 
 Example:
+
 $numbers = [1, 2, 3];
 
 function square(&$value, $key)
@@ -292,12 +299,14 @@ function square(&$value, $key)
 array_walk($numbers, "square");
 
 print_r($numbers)
+
 */
 
 /*19 sort():It is used to sort an array in ascending order based on its values.
 syntax:sort(array);
 
 Example:
+
 $numbers = [40, 10, 30, 20];
 
 sort($numbers);
@@ -308,6 +317,7 @@ print_r($numbers);
 syntax:rsort(array);
 
 Example:
+
 $numbers = [40, 10, 30, 20];
 
 rsort($numbers);
@@ -318,6 +328,7 @@ print_r($numbers);
 syntax:arsort(array);
 
 Example:
+
 $marks = [
     "Ram" => 80,
     "Shyam" => 95,
@@ -333,7 +344,6 @@ print_r($marks);
 syntax:asort(array);
 
 Example:
-
 $marks = [
     "Ram" => 80,
     "Shyam" => 95,
@@ -359,8 +369,8 @@ $student = [
 krsort($student);
 
 print_r($student);
-*/
 
+*/
 
 /*24 ksort():It is used to sort an associative array in ascending order according to its keys while preserving the key-value association.
 syntax:ksort(array);
@@ -385,23 +395,23 @@ Example:
 $colors = ["Red", "Green", "Blue","yellow"];
 
 echo count($colors);
-
 */
+
 /*26 extract():It is used to import array keys as variable names and assign their corresponding values to those variables.
 syntax:extract(array);
 Example:
 
 $student = [
-    "nickname" => "Ramu",
+    "nicknamee" => "Ramu",
     "age" => 20,
     "city" => "Pokhara"
 ];
 
 extract($student);
 
-echo $nickname . "<br>";
-// echo $age . "<br>";
-// echo $city;
+echo $nicknamee . "<br>";
+echo $age . "<br>";
+echo $city;
 */
 
 /*27 in_array():It is used to check whether a specific value exists in an array.
@@ -409,16 +419,16 @@ syntax:in_array(value, array);
 Example:
 
 $colors = ["Red", "Green", "Blue"];
-$result = in_array("green", $colors);
-var_dump($result); // Output: bool(true) since "Green" is found in the
+$result = in_array("Green", $colors);
+// var_dump($result); // Output: bool(true) since "Green" is found in the
 
-// if (in_array("Green", $colors)) {
-//     echo "Value found";
-// } else {
-//     echo "Value not found";
-// }
+if (in_array("Green", $colors)) {
+    echo "Value found";
+} else {
+    echo "Value not found";
+}
+
 */
-
 /*28 list():It is used to assign values from an indexed array to multiple variables in a single statement.
 syntax:list($var1, $var2, $var3) = array;
 Example:
@@ -430,8 +440,8 @@ list($name, $age, $city) = $student;
 echo $name . "<br>";
 echo $age . "<br>";
 echo $city;
-*/
 
+*/
 /*29 range():It is used to create an array containing a range of elements. The elements can be numbers or letters.
 syntax:range(start, end, step);
 Here :
@@ -439,14 +449,14 @@ start → Starting value.
 end → Ending value.
 step (optional) → Increment between values (default is 1).
 Example:
-
-// $numbers = range(1, 50);
+*/
+// $numbers = range(1, 5);
 // $numbers=range("a","z");
 // $numbers = range(1, 50,5);
-$numbers=range("a","z",2);
-print_r($numbers);
+// $numbers=range("a","z",2);
+// print_r($numbers);
 
-*/
+
 
 /*30 sizeof():It is used to count the number of elements in an array.
 syntax:sizeof(array);
@@ -455,11 +465,12 @@ Here :
 $colors = ["Red", "Green", "Blue"];
 
 echo sizeof($colors);
-*/
 
-/*31 array_rand(): It is used to pick one or more random keys from an array. */
+*/
+/*31 array_rand(): It is used to pick one or more random keys from an array. 
 $colors = ["Red", "Green", "Blue"];
 
-$randomKey = array_rand($colors,2);
-// print_r($randomKey); 
+$randomKey = array_rand($colors);
+print_r($randomKey); 
+*/
 ?>

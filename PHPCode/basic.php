@@ -46,5 +46,63 @@ operators in php:
 1) Arithmetic operator(+,-,*,/,%,++,--)
 2) String concatination (.)
 3) Assignment operator(=,+=,-=,*=,/=,%=)
-4) conditional Operators(>,>=,<,<=,==,===) //$a="6" ; $b=6; echo $a==$b;*/ /* control structures(if else,switch, all
-    loops)=> all the syntax and example should be added here when sanam provides me*/ ?>
+4) conditional Operators(>,>=,<,<=,==,===) //$a="6" ; $b=6; echo $a==$b;*/ /* control structures(if else,switch, all /*
+    #*** if else $isTrue=true; if ($isTrue) { echo "The condition is true." ; } else { echo "The condition is false." ;
+    } */ /* #<!-- if else..if ................................................. -->
+
+
+
+    $age = 30;
+    if( $age >1 && $age <=13){ echo "You are Child" ; } else if($age>13 && $age <=30){ echo "You are Adult" ; } else if
+            ($age>30 && $age <=60){ echo "You are Old" ; } else if ($age>60 && $age <=100){
+                    echo "You are Senior Citizen" ; } else{ echo "You are not eligible" ; } */ /* #<!-- Switch case
+                    ......................................................... -->
+
+
+                    $day = "Mon";
+                    switch ($day) {
+                    case "Mon":
+                    echo "Today is Monday";
+                    break;
+                    case "Tue":
+                    echo "Today is Tuesday";
+                    break;
+                    case "Wed":
+                    echo "Today is Wednesday";
+                    break;
+                    case "Thu":
+                    echo "Today is Thursday";
+                    break;
+                    case "Fri":
+                    echo "Today is Friday";
+                    break;
+                    case "Sat":
+                    echo "Today is Saturday";
+                    break;
+                    case "Sun":
+                    echo "Today is Sunday";
+                    break;
+                    default:
+                    echo "Invalid day";
+                    }
+                    /*
+
+                    /*
+
+
+                    #
+                    <!-- Loop Statements ......................................................... -->
+
+                    <!-- for Loop ......................................................... -->
+
+
+
+                    $string = "Love";
+                    for ($i = 0; $i < 5; $i++) { echo $string . "<br>" ; } */ /* #<!-- while Loop
+                        ......................................................... -->
+
+
+
+                        $counter = 0;
+                        while ($counter < 5) { echo "The number is: $counter <br>" ; $counter++; } */ /* # do...while
+                            Loop $name="Sanam" ; do { echo "The name is: $name <br>" ; } while ($counter < 5); */ ?>
