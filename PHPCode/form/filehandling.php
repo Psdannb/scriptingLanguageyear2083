@@ -5,8 +5,11 @@ File handling in PHP refers to the process of creating, opening, reading, writin
 #Opening a File
 The fopen() function is used to open a file.
 synatx: fopen(filename, mode);
-Example: $file = fopen("student.txt", "r");
-
+Example:
+*/
+$filepointer = fopen("student.txt", "r");
+// echo gettype($filepointer);
+/*
 
 #File Opening Modes
 PHP provides different modes for opening files.
@@ -20,31 +23,43 @@ PHP provides different modes for opening files.
 #Closing a File
 After working with a file, it should be closed using fclose().
 example: 
+
 $file = fopen("student.txt", "r");
 
 // perform file operations
+
 fclose($file);
--closing files helps release system resources.
+
+ -closing files helps release system resources.
 
 
 #Writing to a File
 The fwrite() function writes data to an opened file.
  example: 
- $file = fopen("student.txt", "w");
+ */
+//  $file = fopen("student.txt", "w");
 
-fwrite($file, "Name: Ram\n");
-fwrite($file, "Faculty: BCA\n");
+// fwrite($file, "Name: Ram\n");
+// fwrite($file, "Faculty: BCA\n");
+// $content="I am writing from the php code";
+// fwrite($file,$content);
+// fclose($file);
 
-fclose($file);
 
+$nextfile= fopen("student.txt","a");
+// fwrite($nextfile,"I am appending from php ");
+// fclose($nextfile);
+/*
 #Reading a File
 
 The fread() function reads a specified number of bytes from a file.
 syntax: fread(file, length);
 example: 
-$file = fopen("student.txt", "r");
 
-$content = fread($file, filesize("student.txt"));
+$file = fopen("student.txt", "r");
+$allcharactersinfile=filesize("student.txt");
+// echo $allcharactersinfile;
+$content = fread($file,$allcharactersinfile);
 
 echo $content;
 
@@ -53,15 +68,19 @@ fclose($file);
 #Reading a File Using fgets()
 fgets() reads one line at a time from a file.
 Example:
+
  $file = fopen("student.txt", "r");
 
 echo fgets($file);
 echo fgets($file);
+echo fgets($file);
+
 
 fclose($file);
 
 =>PHP provides a simpler function for reading an entire file and that is  file_get_contents()
 example:
+
 $content = file_get_contents("student.txt");
 
 echo $content;
@@ -69,30 +88,35 @@ echo $content;
 
 =>Similarly, file_put_contents() can write data without manually calling fopen(), fwrite(), and fclose().
 example: 
+
 file_put_contents(
     "student.txt",
     "Name: Ram"
 );
 
+
 #Renaming a File
 example:
+
 rename(
-    "student.txt",
-    "students.txt"
+    "students.html", //old file name
+    "students.txt" //new file name
 );
 
 #Copying a File
 example:
+
 copy(
-    "student.txt",
-    "student_backup.txt"
+    "students.txt", // from where we want to copy
+    "student.txt" // from where we want to paste
 );
 
 
 #Checking Whether a File Exists
 Use file_exists().
 example: 
-if (file_exists("student.txt")) {
+
+if (file_exists("studentdddd.txt")) {
     echo "File exists.";
 } else {
     echo "File does not exist.";
@@ -101,12 +125,16 @@ if (file_exists("student.txt")) {
 #Deleting a File
 Use the unlink() function.
 example:
-if (file_exists("student.txt")) {
-    unlink("student.txt");
+
+if (file_exists("students.php")) {
+    unlink("students.php");
     echo "File deleted.";
 }
-
-
-
 */
+// mkdir("sanam");
+// rmdir("sanam");
+
+// qn: how to delete all the directory if it is not empty? 
+
+
 ?>
