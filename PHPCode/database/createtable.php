@@ -1,7 +1,7 @@
 <?php
 require_once"dbconnection.php";
 $createSql = "CREATE TABLE IF NOT EXISTS students (
-    id INT PRIMARY KEY, 
+    id INT PRIMARY KEY 	AUTO_INCREMENT, 
     studentname VARCHAR(50), 
     studentaddress VARCHAR(100), 
     studentphonenumber VARCHAR(15), 
