@@ -14,6 +14,8 @@ $studentname=$_POST['username'];
 $studentaddress=$_POST['address'];
 $studentphonenumer=$_POST['phonenumber'];
 $studentemail=$_POST['email'];
+/* 
+//insert data into the database using mysqli_query
 
 $insertsql="INSERT INTO students(studentname,studentaddress,studentphonenumber,studentEmail,	imagelocation)VALUES('$studentname','$studentaddress','$studentphonenumer','$studentemail','$imagestorage')";
 $response=mysqli_query($connectionString,$insertsql);
@@ -23,7 +25,19 @@ if($response){
 else{
     echo "Failed to insert data";
 }
-
+*/
+//insert data in the database using a secure way(Prepared Statements)
+$insertsql="INSERT INTO students(studentname,studentaddress,studentphonenumber,studentEmail,	imagelocation)VALUES(?,?,?,?,?)";
+$stmt=$connectionString->prepare($insertsql);
+$stmt->bind_param('sssss',$studentname,$studentaddress,$studentphonenumer,$studentemail,$imagestorage);
+if($stmt->Execute()){
+    echo "Data added sucessfully";
+}
+else{
+     echo "Failed to insert data";
+}
+$stmt->close();
+$connectionString->close();
 }
 else{
     echo "error while uploading images so try again";
