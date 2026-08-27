@@ -1,4 +1,5 @@
 <?php
+require_once"dbconnection.php";
 /*
 A JOIN in SQL is used to combine rows from two or more tables based on a related column between them. Joins are useful when related information is stored in different tables and we need to retrieve it together.
 For example, suppose we have two tables:
@@ -65,4 +66,37 @@ USE CASE:
 Use RIGHT JOIN when you want all records from the right table, regardless of whether matching records exist in the left table.
 For example: Show all orders, including orders whose customer information is unavailable.
 */
+/*
+Actual Examples using PHP starts from here
+
+$innerjoin="SELECT customers.fullname, neworders.product
+FROM customers
+INNER JOIN neworders
+ON customers.cid = neworders.cid"; */
+$innerjoin="SELECT C.fullname, O.product
+FROM customers AS C
+INNER JOIN neworders AS O
+ON C.cid = O.cid";
+/*$response= mysqli_query($connectionString,$innerjoin);
+if($response){
+    foreach($response as $data){
+        print_r($data);
+    }
+}
+    */
+
+/*$leftjoin="SELECT customers.fullname, neworders.product FROM customers LEFT JOIN neworders ON customers.cid = neworders.cid";
+$response=mysqli_query($connectionString,$leftjoin);
+if($response){
+    foreach($response as $data){
+        print_r($data);
+    }
+}*/
+$rightjoin="SELECT customers.fullname, neworders.product FROM customers RIGHT JOIN neworders ON customers.cid = neworders.cid";
+$response=mysqli_query($connectionString,$rightjoin);
+if($response){
+    foreach($response as $data){
+        print_r($data);
+    }
+}
 ?>
