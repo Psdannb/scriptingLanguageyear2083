@@ -51,7 +51,8 @@ It cannot be accessed:
 -Outside the class
 -By child classes
 Example: 
-class Student
+
+class student1
 {
    private $name = "Anubhav";
 
@@ -60,11 +61,19 @@ class Student
         echo $this->name;
     }
 }
-
-$obj = new Student();
+class child1 extends student1{
+    public function childshow(){
+         echo $this->name;
+    }
+}
+$obj = new student1();
 
 // $obj->show();
 // $obj->name;
+
+$obj2= new child1();
+    $obj2->childshow();
+
 
 
 
@@ -99,7 +108,7 @@ class BIM extends Student
 $obj = new BIM();
 
 // $obj->display();
-// $obj->college;
+$obj->college;
 // $pobj=new Student();
 // $pobj->college;
 
