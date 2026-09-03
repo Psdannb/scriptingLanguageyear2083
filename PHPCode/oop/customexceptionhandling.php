@@ -19,6 +19,10 @@ class AgeException extends Exception
     {
         return "Invalid age entered.";
     }
+    public function errormessage()
+    {
+        return "Rijan is new sutuwa.";
+    }
 
 }
 

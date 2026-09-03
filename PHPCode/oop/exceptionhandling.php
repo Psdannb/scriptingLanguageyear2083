@@ -81,9 +81,8 @@ catch (Exception $e) {
 finally{
     echo "I am clean up code";
 }
-     */
+     
 
-/*
 Example -2
 
 try {
@@ -105,12 +104,12 @@ finally {
     echo "Finally block executed.";
 
 }
-    */
-/*
+    
+
 Example-3
 
 
-$age = 19;
+$age = 10;
 
 try {
 
@@ -126,11 +125,12 @@ catch (Exception $e) {
     echo "Error: " . $e->getMessage();
 
 }
-*/
-/*
+
+
 example-4
+
 $a=5;
-$b=1;
+$b=0;
 try{
 if($b==0){
     throw new Exception ("Divide by zero is not possible");
@@ -141,9 +141,9 @@ echo "The result is :".$c;
 catch(Exception $excp){
     echo "Error : ". $excp->getMessage();
 }
-/*
+*/
 
-/* exception handling using function 
+/* exception handling using function */
 
 function sum($a,$b){
 if($b==0){
@@ -154,10 +154,10 @@ echo "The result is :".$c;
 
 }
 try{
-    sum(2,5);
+    sum(2,0);
 }
 catch(Exception $xyz){
     echo "Error: ".$xyz->getMessage();
 }
-*/
+
 ?>
