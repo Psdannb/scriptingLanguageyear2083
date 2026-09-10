@@ -1,0 +1,162 @@
+jQuery is a fast, lightweight, open-source JavaScript library that simplifies client-side web development by providing easy-to-use methods for DOM manipulation, event handling, animation, CSS manipulation, and AJAX operations.
+
+####Why jQuery is Used?
+JavaScript can sometimes require several lines of code to perform common tasks such as selecting HTML elements, handling events, changing content, or making AJAX requests.jQuery provides a simpler syntax for these operations.
+Example: Changing HTML Content
+Using JavaScript:
+document.getElementById("message").innerHTML = "Hello World!";
+Using jQuery:
+$("#message").html("Hello World!");
+
+Here, $("#message") selects the HTML element whose id is message.
+
+
+####Including jQuery in an HTML Page
+jQuery can be included in a webpage using a CDN (Content Delivery Network).
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+It should normally be included before writing or loading code that uses jQuery.And jQuery code is commonly executed after the HTML document has been completely loaded using:
+ $(document).ready(function() {
+    // jQuery code
+});
+
+
+
+####Main Features of jQuery
+
+1. DOM Manipulation:jQuery provides simple methods to select and modify HTML elements.
+Example:
+$("#name").val("Dan");
+$("#title").text("Welcome");
+
+2. Event Handling:It provides easy methods for handling events such as click, submit, change, mouseover, etc.
+Example:
+$("#btn").click(function() {
+    alert("Button clicked");
+});
+
+3. AJAX Support: jQuery makes it easier to send and receive data from a server without reloading the entire webpage.
+Example: 
+$.ajax({
+    url: "data.php",
+    type: "POST",
+    success: function(response) {
+        console.log(response);
+    }
+});
+
+4. Animation and Effects: jQuery provides built-in effects such as:show(),hide(),fadeIn(),fadeOut(),slideUp(),slideDown() etc.
+example: $("#box").hide();
+
+5. CSS Manipulation: CSS properties can easily be changed using jQuery.
+Example: 
+$("#box").css("background", "yellow");
+
+6. HTML Manipulation: jQuery can add, remove, and modify HTML elements.
+Example:
+$("#message").html("<b>Hello</b>");
+
+7. Form Handling: jQuery provides convenient methods for accessing form values.
+Example: 
+let name = $("#name").val();
+
+###jQuery Effects
+jQuery provides several effect methods for showing, hiding, fading, and sliding HTML elements. These methods are commonly used to create interactive and dynamic web pages.
+1. hide() Method: The hide() method is used to hide the selected HTML element.
+
+syntax: $(selector).hide();
+with duration: $(selector).hide(1000);
+with callback function: 
+$(selector).hide(1000, function() {
+    alert("Element is hidden");
+});
+The callback function executes after the hiding animation is completed.
+
+2. show() Method: The show() method is used to display an element that has been hidden.
+
+syntax: $(selector).show();
+With Duration: $(selector).show(1000);
+The element gradually becomes visible over 1 second.
+
+
+3. toggle() Method: The toggle() method switches between showing and hiding an element.If the element is visible, it hides it.If the element is hidden, it shows it.
+
+syntax: $(selector).toggle();
+With Duration: $(selector).toggle(1000);
+
+4. fadeIn() Method: The fadeIn() method displays a hidden element using a fading effect.
+syntax: $(selector).fadeIn();
+with duration: $("#box").fadeIn(1000);
+
+5. fadeOut() Method: The fadeOut() method hides an element using a fading effect.
+syntax: $(selector).fadeOut();
+with duration: $(selector).fadeOut(1000);
+
+6. slideDown() Method: The slideDown() method displays a hidden element using a sliding-down effect.
+Example: $("#box").slideDown();
+With duration: $("#box").slideDown(1000);
+
+7. slideUp() Method: The slideUp() method hides an element using a sliding-up effect.
+Example: $("#box").slideUp();
+With duration: $("#box").slideUp(1000);
+
+
+####form handling using jquery
+
+jQuery provides several methods that make form handling easier, including: .val(), .serialize(),FormData, .submit(), .prop(), .is(":checked"), .find(), .reset(), and .ajax() / $.post() for sending form data
+
+.val() Method:
+The .val() method is one of the most commonly used jQuery form methods.
+
+It is used to get or set the value of form elements such as:
+
+<input>
+<textarea>
+<select>
+
+
+.serialize() Method:
+The .serialize() method is used to convert the form's input values into a URL-encoded query string.
+Example:
+$("#btn").click(function() {
+    let data = $("#myForm").serialize();
+
+    console.log(data);
+});
+Note: The .serialize() method only works with form elements that have a name attribute.
+
+
+FormData:
+It is very important when working with forms, especially when the form contains file uploads.
+(we will discuss it in detail in the next section i.e AJAX)
+
+.submit() Method:
+The .submit() method can be used to trigger form submission.
+Example: $("#myForm").submit();
+However, in modern jQuery code, it is generally clearer to use the submit event with .on():
+Example:
+$("#myForm").on("submit", function(e) {
+
+    e.preventDefault();
+
+    // Handle form here
+
+});
+
+Resetting a Form:
+HTML provides the reset() method to reset a form.
+$("#myForm")[0].reset();
+
+#Why [0]?
+$("#myForm") returns a jQuery object, while reset() is a native DOM form method.
+
+.prop() Method:
+.prop() is useful for working with properties of form elements.
+For example, checking a checkbox:
+let checked = $("#terms").prop("checked");
+
+
+.find() for Form Elements
+.find() can be used to search for elements inside a particular form.
+Example:
+let name = $("#myForm").find("input[name='username']").val();
+This is useful when working with multiple forms or complex forms.
