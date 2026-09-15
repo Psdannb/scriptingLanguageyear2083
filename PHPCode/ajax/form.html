@@ -1,0 +1,42 @@
+<html>
+  <head>
+    <title>Form</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  </head>
+  <body>
+    <form>
+      <input type="text" name="username" placeholder="Enter your name" />
+      <input type="email" name="email" placeholder="Enter your email" />
+      <input
+        type="password"
+        name="password"
+        placeholder="Enter your password"
+      />
+      <input type="submit" value="Submit" />
+    </form>
+  </body>
+  <script>
+    $(document).ready(function () {
+      $("form").submit(function (event) {
+        event.preventDefault(); // Prevent the default form submission
+
+        let formData = $(this).serialize(); // Serialize the form data
+
+        $.ajax({
+          type: "POST",
+          url: "data.php",
+          data: formData,
+          beforeSend: function () {
+            alert("Submitting the form...");
+          },
+          success: function (response) {
+            alert(response);
+          },
+          error: function () {
+            alert("An error occurred while submitting the form.");
+          },
+        });
+      });
+    });
+  </script>
+</html>
