@@ -6,7 +6,7 @@ $returndata=array();
 if($response){
     foreach($response as $data){
        $returndata[] = array(
-            'name'    => $data['studentname'], // Fixed: changed from email to name
+            'name'    => $data['studentname'], 
             'address' => $data['studentaddress'],
             'number'  => $data['studentphonenumber'],
             'email'   => $data['studentEmail']
