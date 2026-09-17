@@ -1,6 +1,10 @@
 <?php
 require_once"dbconnection.php";
 // print_r($_FILES);
+// die();
+
+
+
 
 $studentimagename=$_FILES['studentimage']['name'];
 $tempstoragelocation=$_FILES['studentimage']['tmp_name'];
@@ -27,7 +31,7 @@ else{
 }
 */
 //insert data in the database using a secure way(Prepared Statements)
-$insertsql="INSERT INTO students(studentname,studentaddress,studentphonenumber,studentEmail,	imagelocation)VALUES(?,?,?,?,?)";
+$insertsql="INSERT INTO students(studentname,studentaddress,studentphonenumber,studentEmail,imagelocation)VALUES(?,?,?,?,?)";
 $stmt=$connectionString->prepare($insertsql);
 $stmt->bind_param('sssss',$studentname,$studentaddress,$studentphonenumer,$studentemail,$imagestorage);
 if($stmt->Execute()){
